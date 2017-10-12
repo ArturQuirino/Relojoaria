@@ -8,36 +8,9 @@
     <mat-toolbar class="titulo-menu-lateral">
         <label class="texto-titulo">Menu</label>
     </mat-toolbar>
-    <button mat-button>Cadastrar</button>
-    <button mat-button>Consultar</button>
+    <button mat-button class="botao-menu-lateral"><mat-icon>input</mat-icon> Cadastrar</button>
+    <button mat-button class="botao-menu-lateral"><mat-icon>search</mat-icon> Consultar</button>
   </div>
-  <mat-card class="card-principal">
-    <label class="label-cadastrar-venda">Cadastrar venda</label>
-    <form class="formulario-cadastrar">
-      <div class="lado-formulario-cadastrar">
-          <mat-form-field class="campos-formulario">
-              <input matInput placeholder="Nome completo" value="">
-            </mat-form-field>
-            <mat-form-field class="campos-formulario">
-                <input matInput placeholder="CPF" value="">
-            </mat-form-field>
-            <mat-form-field class="campos-formulario">
-                <input matInput placeholder="Marca do relógio" value="">
-            </mat-form-field>
-            <mat-form-field class="campos-formulario">
-                <input matInput placeholder="Observações" value="">
-            </mat-form-field>
-      </div>
-      <div class="lado-formulario-cadastrar">
-          <mat-form-field class="campos-formulario">
-              <input matInput placeholder="Data" value="">
-            </mat-form-field>
-            <mat-form-field class="campos-formulario">
-                <input matInput placeholder="Preço" value="">
-            </mat-form-field>
-      </div>
-    </form>
-    <button mat-raised-button color="primary">Cadastrar</button>
-  </mat-card>
+  <app-cadastro class="card-principal"></app-cadastro>
 </div>
 

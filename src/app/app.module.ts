@@ -4,14 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatSidenavModule, MatButtonModule, MatCardModule, MatInputModule} from '@angular/material';
+import { MatToolbarModule, MatSidenavModule, MatButtonModule, MatCardModule, MatInputModule, MatIconModule} from '@angular/material';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,8 @@ import { MatToolbarModule, MatSidenavModule, MatButtonModule, MatCardModule, Mat
     MatSidenavModule,
     MatButtonModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

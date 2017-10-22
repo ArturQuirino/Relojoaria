@@ -1,0 +1,47 @@
+<mat-card class="card-principal">
+    <label class="label-consultar-venda">Consultar venda</label>
+    <mat-radio-group>
+        <mat-radio-button value="1">Codigo</mat-radio-button>
+        <mat-radio-button value="2">Nome</mat-radio-button>
+        <mat-radio-button value="3">Data</mat-radio-button>
+        <mat-radio-button value="4">CPF</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field class="campo-filtro">
+        <input matInput placeholder="Nome" value="">
+    </mat-form-field>
+    <div class="example-container mat-elevation-z8">
+        <mat-table #table [dataSource]="dataSource">
+      
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+      
+          <!-- Position Column -->
+          <ng-container matColumnDef="codigo">
+            <mat-header-cell *matHeaderCellDef> Codigo </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.codigo}} </mat-cell>
+          </ng-container>
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="nome">
+            <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.nome}} </mat-cell>
+          </ng-container>
+      
+          <!-- Weight Column -->
+          <ng-container matColumnDef="CPF">
+            <mat-header-cell *matHeaderCellDef> CPF </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.CPF}} </mat-cell>
+          </ng-container>
+      
+          <!-- Color Column -->
+          <ng-container matColumnDef="data">
+            <mat-header-cell *matHeaderCellDef> Data </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.data | date:'dd-MM-yyyy'}} </mat-cell>
+          </ng-container>
+      
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+      
+</mat-card>

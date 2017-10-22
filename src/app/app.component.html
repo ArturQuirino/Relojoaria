@@ -8,9 +8,11 @@
     <mat-toolbar class="titulo-menu-lateral">
         <label class="texto-titulo">Menu</label>
     </mat-toolbar>
-    <button mat-button class="botao-menu-lateral"><mat-icon>input</mat-icon> Cadastrar</button>
-    <button mat-button class="botao-menu-lateral"><mat-icon>search</mat-icon> Consultar</button>
+    <button mat-button class="botao-menu-lateral" routerLink="/cadastro"><mat-icon>input</mat-icon> Cadastrar</button>
+    <button mat-button class="botao-menu-lateral" routerLink="/consulta"><mat-icon>search</mat-icon> Consultar</button>
   </div>
-  <app-cadastro class="card-principal"></app-cadastro>
+  <div class="conteudo-principal">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 

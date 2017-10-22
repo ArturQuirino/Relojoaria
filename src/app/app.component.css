@@ -43,7 +43,7 @@
     color: white;
 }
 
-
-  
-
-
+.conteudo-principal{
+    display: flex;
+    flex-grow: 1;
+}

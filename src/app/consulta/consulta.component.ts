@@ -11,20 +11,20 @@ import 'rxjs/add/observable/of';
 
 
 export class ConsultaComponent {
-    displayedColumns = ['codigo', 'nome', 'CPF', 'data'];
+    displayedColumns = ['codigo', 'nome', 'data', 'pronto'];
     dataSource = new ExampleDataSource();
 }
 
 export interface Element {
     codigo: number;
     nome: string;
-    CPF: string;
     data: Date;
+    pronto: boolean;
 }
 
  const dadosTabela: Element[] = [
-    {codigo: 1, nome: 'Artur Pires Quirino', CPF: '1.0079', data: new Date()},
-    {codigo: 2, nome: 'Heliton Quirino Câmara', CPF: '4.0026', data: new Date()}
+    {codigo: 1, nome: 'Artur Pires Quirino', data: new Date(), pronto: true},
+    {codigo: 2, nome: 'Heliton Quirino Câmara', data: new Date(), pronto: false}
 ];
 
 export class ExampleDataSource extends DataSource<any> {

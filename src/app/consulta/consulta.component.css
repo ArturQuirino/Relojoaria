@@ -3,6 +3,10 @@
     flex-grow: 1;
 }
 
+.container-component{
+    width: 100%;
+}
+
 .label-consultar-venda{
     margin-bottom: 16px;
     font-size: 24px;

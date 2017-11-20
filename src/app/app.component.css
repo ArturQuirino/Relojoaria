@@ -4,6 +4,7 @@
     border-color: rgba(0, 0, 0, 0.87);
     z-index: 2;
     position:relative;
+    width: 100%;
 }
 
 .titulo{
@@ -14,10 +15,16 @@
     color: white;
 }
 
+.container-body {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+}
+
 .menu-lateral {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    min-width: 20%;
     height: initial;
     background: #3F51B5;
 }
@@ -25,18 +32,6 @@
 .titulo-menu-lateral{
     background: #3F51B5;
 }
-
-.container-body {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-}
-
-.card-principal{
-    display: flex;
-    flex-grow: 1;
-}
-
 .botao-menu-lateral{
     display: flex;
     justify-content: flex-start;
@@ -45,5 +40,11 @@
 
 .conteudo-principal{
     display: flex;
-    flex-grow: 1;
+    width: 80%;
 }
+
+.card-principal{
+    display: flex;
+}
+
+

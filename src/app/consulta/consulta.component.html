@@ -1,10 +1,10 @@
-<mat-card class="card-principal">
+<div class="container-component">
+  <mat-card class="card-principal">
     <label class="label-consultar-venda">Consultar venda</label>
     <mat-radio-group>
         <mat-radio-button value="1">Codigo</mat-radio-button>
         <mat-radio-button value="2">Nome</mat-radio-button>
         <mat-radio-button value="3">Data</mat-radio-button>
-        <mat-radio-button value="4">CPF</mat-radio-button>
     </mat-radio-group>
     <mat-form-field class="campo-filtro">
         <input matInput placeholder="Nome" value="">
@@ -28,15 +28,22 @@
           </ng-container>
       
           <!-- Weight Column -->
-          <ng-container matColumnDef="CPF">
+          <!-- <ng-container matColumnDef="CPF">
             <mat-header-cell *matHeaderCellDef> CPF </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.CPF}} </mat-cell>
-          </ng-container>
+          </ng-container> -->
       
           <!-- Color Column -->
           <ng-container matColumnDef="data">
             <mat-header-cell *matHeaderCellDef> Data </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.data | date:'dd-MM-yyyy'}} </mat-cell>
+          </ng-container>
+  
+          <ng-container matColumnDef="pronto">
+            <mat-header-cell *matHeaderCellDef> Pronto </mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <mat-slide-toggle [checked]=element.pronto color="primary"></mat-slide-toggle>
+            </mat-cell>
           </ng-container>
       
           <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
@@ -44,4 +51,8 @@
         </mat-table>
       </div>
       
-</mat-card>
+  </mat-card>
+  
+</div>
+
+

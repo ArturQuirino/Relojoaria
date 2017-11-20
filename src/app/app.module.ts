@@ -12,7 +12,7 @@ import { ConsultaComponent } from './consulta/consulta.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatSidenavModule, MatButtonModule,
           MatCardModule, MatInputModule, MatIconModule, MatRadioModule,
-          MatTableModule} from '@angular/material';
+          MatTableModule, MatSlideToggleModule} from '@angular/material';
 
 const appRoutes: Routes = [
   { path: 'consulta', component: ConsultaComponent },
@@ -40,7 +40,8 @@ const appRoutes: Routes = [
     MatIconModule,
     RouterModule.forRoot(appRoutes),
     MatRadioModule,
-    MatTableModule
+    MatTableModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

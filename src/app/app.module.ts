@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatSidenavModule, MatButtonModule,
           MatCardModule, MatInputModule, MatIconModule, MatRadioModule,
           MatTableModule, MatSlideToggleModule} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'consulta', component: ConsultaComponent },
@@ -43,10 +44,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MatRadioModule,
     MatTableModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    HttpClientModule
   ],
   providers: [
-    CadastroService
+    CadastroService,
   ],
   bootstrap: [AppComponent]
 })

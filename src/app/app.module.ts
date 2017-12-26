@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 
+import { CadastroService } from './cadastro/cadastro.service';
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatSidenavModule, MatButtonModule,
@@ -43,7 +45,9 @@ const appRoutes: Routes = [
     MatTableModule,
     MatSlideToggleModule
   ],
-  providers: [],
+  providers: [
+    CadastroService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

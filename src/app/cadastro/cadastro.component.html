@@ -4,7 +4,7 @@
     <form class="formulario-cadastrar">
         <div class="lado-formulario-cadastrar">
             <mat-form-field class="campos-formulario">
-                <input matInput placeholder="Nome completo" value="">
+                <input matInput placeholder="Nome completo" value="" #nome>
             </mat-form-field>
             <!-- <mat-form-field class="campos-formulario">
                 <input matInput placeholder="CPF" value="">
@@ -15,21 +15,21 @@
             <!-- <mat-form-field class="campos-formulario">
                 <input matInput placeholder="Observações" value="">
             </mat-form-field> -->
-            <mat-form-field class="campos-formulario">
-                <input matInput placeholder="Preço" value="">
-            </mat-form-field>
         </div>
         <div class="lado-formulario-cadastrar">
             <!-- <mat-form-field class="campos-formulario">
                 <input matInput placeholder="Telefone" value="">
             </mat-form-field> -->
+            <!-- <mat-form-field class="campos-formulario">
+                <input matInput placeholder="Data" value="{{dataAtual | date:'dd/MM/yyyy'}}">
+            </mat-form-field> -->
             <mat-form-field class="campos-formulario">
-                <input matInput placeholder="Data" value="">
+                <input matInput placeholder="Preço" value="" #preco>
             </mat-form-field>
   
         </div>
     </form>
-    <button mat-raised-button color="primary" class="botao-cadastrar">Cadastrar</button>
+    <button mat-raised-button color="primary" class="botao-cadastrar" (click)="cadastrarServico(nome, preco)">Cadastrar</button>
   </mat-card>
   
 </div>
